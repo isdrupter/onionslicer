@@ -1,5 +1,5 @@
 #!/bin/bash
-# Handler for onionslicer
+# Handler for onionslicer (and lots of other shells)
 # REQUIRES: nc or ncat
 
 using=ncat
