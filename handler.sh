@@ -2,10 +2,11 @@
 # Handler for onionslicer
 # REQUIRES: nc or ncat
 
-if [ ! -x "$(ncat -v)" ];then
-  using=ncat
+using=ncat
+if [ -x "$(ncat -v)" ];then
+  using=nc
     if [ ! -x "$(nc -v)" ];then
-      using=nc
+      echo 'Please install ncat or nc...'
     fi
 fi
 
