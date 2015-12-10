@@ -10,11 +10,6 @@ port=$2
 
 case $1 in
 
--h|--help)
-
-Echo "usage: $0 -p <port>"
-
-;;
 
 -p|--port)
 
@@ -30,6 +25,13 @@ else
 fi
 
 ;;
+
+*)
+
+Echo "usage: $0 -p <port>"
+
+;;
+
 
 esac
 
